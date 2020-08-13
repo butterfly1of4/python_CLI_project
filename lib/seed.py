@@ -23,14 +23,18 @@ class Contacts(BaseModel):
 db.drop_tables([Contacts])
 db.create_tables([Contacts])
  
-judy = Contacts(first_name='Judy', last_name='Houck', number='3016397120', email='judythouck20@gmail.com')
+judy = Contacts(first_name='Judy', last_name='Houck', number='3016397120', email='judy@gmail.com')
 judy.save()
-aimee = Contacts(first_name='Aimee', last_name='Houck', number='3014713212', email='ahouck20@gmail.com')
+aimee = Contacts(first_name='Aimee', last_name='Houck', number='3014713212', email='aimee0@gmail.com')
 aimee.save()
 
-print(aimee)
-print(judy)
- 
+# def findByFirstName():
+
+
+
+# print(aimee)
+# print(judy)
+
 
 #Example   
 # class Contacts(BaseModel):
