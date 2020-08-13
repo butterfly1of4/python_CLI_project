@@ -1,15 +1,15 @@
 # python_CLI_project
 # Contact book
 
-# Usage: 
-    Add:
-    -first name
-    -last name
-    -address 
-    -number
-    ---maybe birthday
+main.py : 
 
-    Search:
-    - find contact by first name
+functions:
+need input
+    add
+    update
+    seed
+    search
 
-tor usn tests: python3 main.py
+
+seed.py:
+need instances-contacts

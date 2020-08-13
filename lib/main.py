@@ -1,17 +1,12 @@
-from peewee import *
-from datetime import date
-db = PostgresqlDatabase('contacts', user='postgres', password='',
-                        host='localhost', port=5432)
-
-db.connect()
+from seed import Contacts
 
 
-class BaseModel(Model):
-    class Meta:
-        database = db
-        
-class Contacts(BaseModel):
-    name = CharField()
-    birthday = DateField()
-    
-db.create_tables([Contacts])
+print("My Contacts:")
+menu = input("Please choose from the following menu options: ")
+
+#List All Contacts
+if menu == "all":
+    all_contacts = Contacts.select(aimee, judy)
+    print(all_contacts)
+elif menu == "Aimee":
+    contact_aimee = Contacts.get(aimee)
