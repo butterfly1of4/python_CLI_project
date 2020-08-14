@@ -2,15 +2,7 @@ from seed import *
 from seed import Contacts
 
 
-on = False
-def restart():
-    if on == True:
-        welcome()
-        menu = input("")
-    elif on==False:
-        print('stop')
-    
-    
+
 print("My Contacts:")
 def welcome():
     print("Please choose from the following menu options: \n")
@@ -19,6 +11,7 @@ def welcome():
     print("To create a New contact: Type 'new'\n")
 welcome()
 
+on = False
 menu = input("Type your choice: ")
 # print(menu)
 
@@ -30,22 +23,11 @@ def findAll():
     for entry in all:
         print(entry.first_name, entry.last_name,entry.number,entry.email)
     # findAll()
+if menu == 'all': #and on == True:       
+    # findAll()
     on==False
     # restart()
-    # print(find_all)
-
-#FIND ONE     
-def findName():
-    on ==True
-    person = Contacts.get(Contacts.first_name == menu)
-    print(person.first_name, person.last_name, person.number, person.email)
-    # person = Contacts.select().where(Contacts.first_name == menu)
-    # print(name.first_name for name in person)
-    # findName()
-        
-    on == False
-#     # restart()
-#     # welcome()
+    welcome()
     
 #CREATE 
 def createContact():
@@ -54,21 +36,41 @@ def createContact():
     last = input("Last Name: ")
     number = input("Phone Number: ")
     email = input("Email: ")
-    c = Contacts(first_name = first, last_name =last, number = number, email=email)
+    c = Contacts.create(first_name = first, last_name =last, number = number, email=email)
     c.save()
     # createContact()
     on == False
-    # print(createContact)
+if (menu == 'new'):
+    # createContact()
+    # restart()
+    welcome()
 
-if menu == 'all': #and on == True:       
-    findAll()
-    restart()
-elif menu == Contacts.first_name:
-    findName()
-    restart()  
-elif menu == 'create contact' or menu == 'create' or menu == 'new':
-    createContact()
-    restart()
 
-    # welcome()
-    # on == False 
+
+#FIND ONE     
+def findName():
+    on ==True
+    person = Contacts.get(Contacts.first_name == menu)
+    print(person.first_name, person.last_name, person.number, person.email)
+    # findName()
+if menu == Contacts.first_name:
+    # findName()
+    on == False
+    # restart()  
+    welcome()
+
+def restart():
+    while on == False:
+        findName()
+        findAll()
+        createContact()
+        menu == menu
+    if  on==True:
+        print('stop')
+restart()  
+   
+
+    
+# if menu == 'exit':
+    # on == True;
+
