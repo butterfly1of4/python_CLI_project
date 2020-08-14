@@ -1,6 +1,15 @@
 from seed import *
 from seed import Contacts
 
+
+# on = True
+# def restart():
+    # if on == False:
+    #     welcome()
+    # elif on==True:
+    #     print('going')
+    
+    
 def welcome():
     print("My Contacts:")
     print("Please choose from the following menu options: \n")
@@ -11,14 +20,21 @@ welcome()
 
 menu = input("Type your choice: ")
 
+def find_all():
+    
 
+def find_name():
+        get_person = Contacts.get(Contacts.first_name == menu)
+        print(get_person)
+        
+        
 if menu == "Contacts.name.first_name":
-    
-    print(Contacts.name.first_name, "main")
-    
+    find_name()
+    print(find_name)
+
 #Create
 def createContact():
-    on = True
+    # on == True
     first = input("First Name: ")
     last = input("Last Name: ")
     number = input("Phone Number: ")
@@ -27,13 +43,11 @@ def createContact():
     c.save()
 
 
-if menu == 'create contact':
+if menu == 'create contact' or menu == 'new':
     createContact()
-    print(createContact,)
+    db="INSERT INTO contacts(first_name,last_name,number,email VALUE first, last, number, email )"
+    print(createContact)
+    print(db)
+    # welcome()
+    # on == False 
 #create variable so while true, program is active
-on = False 
-def restart():
-    if on == False:
-        welcome()
-    else:
-        print('going')
