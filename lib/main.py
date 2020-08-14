@@ -14,51 +14,50 @@ print("To create a New contact: Type 'new'\n")
 menu = input("Type your choice: ")
 
 # print(menu)
-
-
+while True:   
     
-def findAll():
-    
-    all = Contacts.select()
-    for entry in all:
-        print(entry.first_name, entry.last_name,entry.number,entry.email)
+    def findAll():
+        all = Contacts.select()
+        for entry in all:
+            print(entry.first_name, entry.last_name,entry.number,entry.email)
     # findAll()
-if menu == 'all': #and on == True:       
-    findAll()
+    if menu == 'all': #and on == True:       
+        findAll()
+        break
     # restart()
 
     # on==False
     
 #CREATE 
-def createContact():
+    def createContact():
     # on == True
-    first = input("First Name: ")
-    last = input("Last Name: ")
-    number = input("Phone Number: ")
-    email = input("Email: ")
-    Contacts.create(first_name = first, last_name =last, number = number, email=email)
-    # c.save()
+        first = input("First Name: ")
+        last = input("Last Name: ")
+        number = input("Phone Number: ")
+        email = input("Email: ")
+        Contacts.create(first_name = first, last_name =last, number = number, email=email)
+
     # createContact()
     # on == False
-if (menu == 'new'):
-    createContact()
+    if (menu == 'new'):
+        createContact()
     # restart()
-    
+        break
 
 
 
 #FIND ONE     
-def findName():
+    def findName():
     # on ==True
-    person = Contacts.get(Contacts.first_name == menu)
-    print(person.first_name, person.last_name, person.number, person.email)
+        person = Contacts.get(Contacts.first_name == menu)
+        print(person.first_name, person.last_name, person.number, person.email)
     # findName()
-if menu == Contacts.first_name:
-    findName()
+    if menu == Contacts.first_name:
+        findName()
     # on == False
     # restart()  
  
-
+    break
 # def restart():
 #     while on == False:
 #         menu == menu
