@@ -19,7 +19,9 @@ def welcome():
 welcome()
 
 menu = input("Type your choice: ")
+# print(menu)
 
+#FIND ALL 
 def find_all():
     all = Contacts.select()
     for i in all:
@@ -28,17 +30,22 @@ def find_all():
 if menu == 'all':       
     find_all()
     # print(find_all)
-    
-def find_name():
-        get_person = Contacts.get(Contacts.first_name == menu)
-        print(get_person)
-        
-        
-if menu == "Contacts.first_name":
-    find_name()
-    print(find_name)
 
-#Create
+#FIND ONE    
+
+ 
+def find_name():
+    person = Contacts.get(Contacts.first_name == menu)
+    print(person.first_name, person.last_name, person.number, person.email, "first name")
+    # person = Contacts.select().where(Contacts.first_name == menu)
+    # print(name.first_name for name in person)
+        
+if menu == Contacts.first_name:
+    find_name()
+    # print(find_name)
+    print("print person")
+    
+#CREATE 
 def createContact():
     # on == True
     first = input("First Name: ")
@@ -52,7 +59,7 @@ def createContact():
 if menu == 'create contact' or menu == 'new':
     createContact()
     print(createContact)
-    print(db)
+    # print(db)
     # welcome()
     # on == False 
 #create variable so while true, program is active
