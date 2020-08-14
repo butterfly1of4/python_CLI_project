@@ -3,8 +3,7 @@ from models import Contacts
 
     
 print("My Contacts:")
-# False = off- stop running
-#True = on- keep running
+
 on = True
 while True:   
         
@@ -16,8 +15,6 @@ while True:
     intro()
     menu = input("Type your choice: ")
 
-# print(menu)
-    
     def findAll():
         all = Contacts.select()
         for entry in all:
@@ -56,8 +53,10 @@ while True:
         # restart()  
         continue
 
-    if menu == 'exit' or menu == 'quit' or menu == 'close':
-        on  == False
-        print("Goodbye")
+    def exit():
+        if menu == 'exit':
+            on  == False
+            print("Goodbye")
+    exit()
     break
     
