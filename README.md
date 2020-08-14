@@ -9,3 +9,4 @@ main.py :
 -They should be able to see a list of contacts in their contact book. 
 -They should be able to find a contact by the contact's first name.
 
+https://github.com/Daniel-Edminster/python-contacts/blob/master/lib/contact.class.py
