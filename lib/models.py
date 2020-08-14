@@ -19,3 +19,4 @@ class Contacts(BaseModel):
     last_name = CharField()
     number =  CharField()
     email = CharField()
+    # on_list = BooleanField()

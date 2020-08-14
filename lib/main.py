@@ -14,7 +14,14 @@ while on == True:
         print("3: To create a New contact: Type 'new'\n")
     intro()
     menu = input("Type your choice: ")
-
+#EXIT CHECK 
+    def checkExit():
+        if menu == 'exit':
+            on == False
+            print("Goodbye")
+        else:
+            print('go on')
+        checkExit()
 # FIND ALL
     def findAll():
         all = Contacts.select()
@@ -49,11 +56,14 @@ while on == True:
         continue
 
 # EXIT
-else:
-    menu == 'exit'
+    # def exit():
+    #     if menu == 'exit':
+    #         on== False
+    #         print("Goodbye")
+    #     exit()
+    #     # break
+else: 
     on == False
     
-        # def exit():
-    print("Goodbye")
-    # exit()
-    # break
+    print("exiting")
+    
