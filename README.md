@@ -23,6 +23,8 @@ To access the contents of this app, you will need to do several things.
         ```CREATE DATABASE  <name>```
        -->
 ## Using the book:
+Open the app, and run: ```python3 seed.py``` to seed the database initially. Also make sure to run ```\c contacts``` then ```SELECT * FROM Contacts;``` to seed the SQL tables.
+Start the program: ```python3 main.py```
 When the program is initiated, there will be a prompt that appears on the screen giving the user option of what they want to do with the app. The choices are: 
 
 - Type 'all' to see a list of all the contacts
