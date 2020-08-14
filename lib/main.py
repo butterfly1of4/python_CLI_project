@@ -5,16 +5,18 @@ from models import Contacts
 print("My Contacts:")
 # False = off- stop running
 #True = on- keep running
-# on = False
-print("Please choose from the following menu options: \n")
-print("For a list of All Contacts: Type 'all'; \n")
-print("To find One contact by first-name: Type the first name of the person you're looking for;\n ")
-print("To create a New contact: Type 'new'\n")
-
-menu = input("Type your choice: ")
+on = True
+while True:   
+        
+    def intro():
+        print("Please choose from the following menu options: \n")
+        print("1: For a list of All Contacts: Type 'all'; \n")
+        print("2: To find One contact by first-name: Type the first name of the person you're looking for;\n ")
+        print("3: To create a New contact: Type 'new'\n")
+    intro()
+    menu = input("Type your choice: ")
 
 # print(menu)
-while True:   
     
     def findAll():
         all = Contacts.select()
@@ -23,11 +25,11 @@ while True:
     # findAll()
     if menu == 'all': #and on == True:       
         findAll()
-        break
-    # restart()
-
+        # restart()
+        continue
+        # break
     # on==False
-    
+    # intro()
 #CREATE 
     def createContact():
     # on == True
@@ -37,14 +39,10 @@ while True:
         email = input("Email: ")
         Contacts.create(first_name = first, last_name =last, number = number, email=email)
 
-    # createContact()
-    # on == False
     if (menu == 'new'):
         createContact()
-    # restart()
-        break
-
-
+        # restart()
+        continue
 
 #FIND ONE     
     def findName():
@@ -55,18 +53,11 @@ while True:
     if menu == Contacts.first_name:
         findName()
     # on == False
-    # restart()  
- 
+        # restart()  
+        continue
+
+    if menu == 'exit' or menu == 'quit' or menu == 'close':
+        on  == False
+        print("Goodbye")
     break
-# def restart():
-#     while on == False:
-#         menu == menu
-#     if  on==True:
-#         print('stop')
-# restart()  
-   
-
     
-# if menu == 'exit':
-    # on == True;
-
