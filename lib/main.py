@@ -2,12 +2,12 @@ from seed import *
 from seed import Contacts
 
 
-# on = True
-# def restart():
-    # if on == False:
-    #     welcome()
-    # elif on==True:
-    #     print('going')
+on = False
+def restart():
+    if on == False:
+        welcome()
+    elif on==True:
+        print('going')
     
     
 def welcome():
@@ -21,14 +21,20 @@ welcome()
 menu = input("Type your choice: ")
 
 def find_all():
+    all = Contacts.select()
+    for i in all:
+        print(i.first_name, i.last_name,i.number,i.email)
+        
+if menu == 'all':       
+    find_all()
+    # print(find_all)
     
-
 def find_name():
         get_person = Contacts.get(Contacts.first_name == menu)
         print(get_person)
         
         
-if menu == "Contacts.name.first_name":
+if menu == "Contacts.first_name":
     find_name()
     print(find_name)
 
@@ -45,7 +51,6 @@ def createContact():
 
 if menu == 'create contact' or menu == 'new':
     createContact()
-    db="INSERT INTO contacts(first_name,last_name,number,email VALUE first, last, number, email )"
     print(createContact)
     print(db)
     # welcome()
