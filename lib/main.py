@@ -12,6 +12,7 @@ while on == True:
         print("1: For a list of All Contacts: Type 'all'; \n")
         print("2: To find One contact by first-name: Type the first name of the person you're looking for;\n ")
         print("3: To create a New contact: Type 'new'\n")
+        print("4: To exit the program: Type 'exit\n")
     intro()
     menu = input("Type your choice: ")
 #EXIT CHECK 
@@ -29,7 +30,7 @@ while on == True:
             print(entry.first_name, entry.last_name, entry.number, entry.email)
     if menu == 'all':
         findAll()
-
+    
         continue
       
 # CREATE
@@ -50,10 +51,11 @@ while on == True:
     def findName():
         person = Contacts.get(Contacts.first_name == menu)
         print(person.first_name, person.last_name, person.number, person.email)
-    if menu == Contacts.first_name:
+    if menu == Contacts.first_name and menu != 'exit': 
         findName()
-
         continue
+    elif menu == 'exit':
+        break
 
 # EXIT
     # def exit():
@@ -64,6 +66,6 @@ while on == True:
     #     # break
 else: 
     on == False
-    
+    menu == 'exit'
     print("exiting")
     
