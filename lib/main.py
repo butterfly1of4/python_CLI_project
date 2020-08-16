@@ -55,25 +55,34 @@ while on == True:
 
     def updateContact():
         updateName = input("Type the first name of the contact you would like to update: ")
-        print(updateName)
-        print("found update")
+        person = Contacts.get(Contacts.first_name == updateName)
+        findField = input("Enter the number of the field you would like to update:\n"
+                          "1. First Name\n"
+                          "2. Last Name\n"
+                          "3. Phone Number\n"
+                          "4. Email Address: ")
+        if findField == "1":
+           print(f"First Name:\n {person.first_name}") 
+        elif findField == "2":
+            print(f"fLast Name:\n {person.first_name}: {person.last_name}")
+        elif findField == "3":
+            print(f"Phone Number:\n {person.first_name}: {person.number}: ")
+        elif findField == "4": 
+            print(f"Email Address:\n {person.first_name}: {person.email}")
+        else:
+            print("Select Again")
+            # findField = input("Enter the number of the field you would like to update:\n"
+            #               "1. First Name\n"
+            #               "2. Last Name\n"
+            #               "3. Phone Number\n"
+            #               "4. Email Address: ")
+        newData = input("Please enter the new text of the field: ")
+        
     if menu == 'update':
         updateContact()
-        continue
-
-        
-    #     break
-
-        
-        # person = Contacts.get(Contacts.first_name == findName)
+        continue  
   
-        # findField = input("Enter the number of the field you would like to update:\n"
-        #                   "1. First Name\n"
-        #                   "2. Last Name\n"
-        #                   "3. Phone Number\n"
-        #                   "4. Email Address: ")
-        # newData = input("Please enter the new text of the field: ")
-        # print(f'{person} : {findField}')
+        # print(f'{updateName} : {findField}')
         # last = Contacts.get(Contacts.last_name == (Contacts.last_name == findName))
         # for field in Contacts:
         #     if field == 1:
