@@ -64,7 +64,7 @@ while on == True:
         if findField == "1":
                 print(f"First Name:\n {person.first_name}") 
         elif findField == "2":
-            print(f"fLast Name:\n {person.first_name}: {person.last_name}")
+            print(f"Last Name:\n {person.first_name}: {person.last_name}")
         elif findField == "3":
             print(f"Phone Number:\n {person.first_name}: {person.number}: ")
         elif findField == "4": 
@@ -74,18 +74,34 @@ while on == True:
         newData = input("Please enter the new text of the field: ")
         print(newData)
         
+        last = Contacts.get(Contacts.last_name==person.last_name)
+        num = Contacts.get(Contacts.number == person.number)
+        mail = Contacts.get(Contacts.email == person.email) 
         
         if findField == "1":
             person = Contacts.get(Contacts.first_name == updateName)
             person.first_name = newData
             person.save()
-        print(person.first_name, person.last_name, person.number, person.email)
-            
+        
+        elif findField == "2":
+            last = Contacts.get(Contacts.last_name == person.last_name)
+            last.last_name = newData
+            last.save()
+            # print(person.last_name, last.last_name, "three")
+        elif findField == "3":
+            num = Contacts.get(Contacts.number == person.number)
+            num.number = newData
+            num.save()
+        elif findField == "4":
+            mail = Contacts.get(Contacts.email == person.email) 
+            mail.email = newData
+            mail.save()
+        print(person.first_name, last.last_name, num.number, mail.email)
         
     if menu == 'update':
         updateContact()
         continue  
-  
+        
 
     #DELETE
     # def deleteContact():
