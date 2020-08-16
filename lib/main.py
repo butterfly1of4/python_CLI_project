@@ -13,7 +13,8 @@ while on == True:
         print("2: To find One contact by first-name: Type the first name of the person you're looking for;\n ")
         print("3: To create a New contact: Type 'new'\n")
         print("4: To update a contact: Type 'update'\n")
-        print("5: To exit the program: Type 'exit\n")
+        print("5: To delete a contact: Type 'delete'\n")
+        print("6: To exit the program: Type 'exit\n")
     intro()
     menu = input("Type your choice: ")
 # EXIT CHECK
@@ -103,9 +104,18 @@ while on == True:
         continue  
         
 
-    #DELETE
-    # def deleteContact():
-    
+#DELETE
+    def deleteContact():
+        deleteName = input("Type the name of the contact you wish to delete: ")
+        deleteContact = Contacts.get(Contacts.first_name == deleteName)
+        print(deleteContact.first_name, deleteContact.last_name, deleteContact.number, deleteContact.email)
+        deleteContact.delete_instance()
+        print("deleted")
+        
+    if menu == 'delete':
+        deleteContact()
+        continue       
+ 
     
  # FIND ONE BY FIRST NAME
     def findName():
@@ -120,6 +130,5 @@ while on == True:
        
 # EXIT
 else:
-    print("exiting")
     on == False
     menu == 'exit'
