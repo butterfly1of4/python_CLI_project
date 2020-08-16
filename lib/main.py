@@ -111,7 +111,9 @@ while on == True:
         print(deleteContact.first_name, deleteContact.last_name, deleteContact.number, deleteContact.email)
         deleteContact.delete_instance()
         print("deleted")
-        
+        all = Contacts.select()
+        for entry in all:
+            print(entry.first_name, entry.last_name, entry.number, entry.email)
     if menu == 'delete':
         deleteContact()
         continue       
