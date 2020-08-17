@@ -1,8 +1,7 @@
 # python_CLI_project
 # Contact book
 
-This project allows a user to manage a contacts book from the command line. They can create new contacts, see a list of current contacts, get a listing of all contacts, and search for contacts by first name. Update and delete features to come. 
-
+This project allows a user to manage a contacts book from the command line. They can create new contacts, see a list of current contacts, get a listing of all contacts, and search for contacts by first name, update contacts, and delete contacts.
 ## Requirements:
 This program was built using python and SQL with Peewee throught the CLI. To run this you will need:
     -Python 
@@ -31,6 +30,8 @@ When the program is initiated, there will be a prompt that appears on the screen
 - Type 'new' to create a new contact
 - To find a specific contact by first name, type the name of the person. 
     ***Note that the contacts are currently case-sensitive, so make sure the contact you entered is correct***
+- Type 'update' to change a field in the contact.
+- Type 'delete' to delete the entire contact.
 - Type 'exit' to end the app.
 
 All of these actions can be repeated until the program is exited.
