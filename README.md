@@ -4,10 +4,11 @@
 This project allows a user to manage a contacts book from the command line. They can create new contacts, see a list of current contacts, get a listing of all contacts, and search for contacts by first name, update contacts, and delete contacts.
 ## Requirements:
 This program was built using python and SQL with Peewee throught the CLI. To run this you will need:
-    -Python 
-    -Postgres, or another equivalent program to run SQL
-    -Peewee
-    -Knowledge of Python and SQL
+
+    - Python 
+    - Postgres, or another equivalent program to run SQL
+    - Peewee
+    - Knowledge of Python and SQL
 
 
 ## Opening the book
