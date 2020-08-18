@@ -14,19 +14,19 @@ This program was built using python and SQL with Peewee throught the CLI. To run
 ## Opening the book
 To access the contents of this app, you will need to do several things. 
   
-        1. Make sure the latest version of Python is installed. I used Python 3.8.
-        2. Check if PostgreseSQL or a similar Object-Relational Database softare is installed. 
-        3. Run:
+    1. Make sure the latest version of Python is installed. I used Python 3.8.
+    2. Check if PostgreseSQL or a similar Object-Relational Database softare is installed. 
+    3. Run:
         ``` 
         pipenv install peewee psychopg2-binary autopep8
         ```
-        4. Change into
+    4. Change into
          ```pipenv shell``` 
-         to run the virtual environment.
-        5. In one terminal, type:
+        to run the virtual environment.
+    5. In one terminal, type:
          ```psql``` 
          to enter into into the SQL shell.
-        6. Make sure there is a database created for your contacts to be store in. If you need to create one:
+    6. Make sure there is a database created for your contacts to be store in. If you need to create one:
         ```CREATE DATABASE  <name>```
         
 
