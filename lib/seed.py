@@ -8,7 +8,8 @@ judy = Contacts(first_name='Judy', last_name='Houck', number='3016397120', email
 judy.save()
 aimee = Contacts(first_name='Aimee', last_name='Houck', number='3014713212', email='aimee0@gmail.com')
 aimee.save()
-lee = Contacts(first_name="Lee", last_name='Houck', number='2409861234', emaill='lee@gmail.com')
+lee = Contacts(first_name="Lee", last_name='Houck', number='2409861234', email='lee@gmail.com')
+lee.save()
 # def findByFirstName():
 
 

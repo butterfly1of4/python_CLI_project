@@ -1,6 +1,6 @@
 from peewee import *
 from models import Contacts
-import re
+
 
 print("My Contacts:")
 
@@ -16,8 +16,7 @@ while on == True:
         print("5: To delete a contact: Type 'delete'\n")
         print("6: To exit the program: Type 'exit\n")
     intro()
-    menu = input("Type your choice: "), re.IGNORECASE
-
+    menu = input("Type your choice: ")
 # EXIT CHECK
 
     def checkExit():
@@ -76,7 +75,7 @@ while on == True:
         newData = input("Please enter the new text of the field: ")
         print(newData)
         
-        last = Contacts.get(Contacts.last_name==person.last_name)
+        last = Contacts.get(Contacts.last_name == person.last_name)
         num = Contacts.get(Contacts.number == person.number)
         mail = Contacts.get(Contacts.email == person.email) 
         
@@ -115,7 +114,7 @@ while on == True:
         all = Contacts.select()
         for entry in all:
             print(entry.first_name, entry.last_name, entry.number, entry.email)
-    if menu == 'delete' or menu  == 'del':
+    if menu == 'delete':
         deleteContact()
         continue       
  
