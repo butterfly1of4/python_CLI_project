@@ -2,21 +2,22 @@ from peewee import *
 from models import Contacts
 
 
-print("My Contacts:")
-
 on = True
 while on == True:
+    print("-----------------------------------------------------")
+    print("*****  My Contacts:  *****")
 
     def intro():
         print("\nPlease choose from the following menu options: \n")
+        print("-----------------------------------------------------")
         print("1: For a list of All Contacts: Type 'all'; \n")
         print("2: To find One contact by first-name: Type the first name of the person you're looking for;\n ")
         print("3: To create a New contact: Type 'new'\n")
-        print("4: To update a contact: Type 'update'\n")
-        print("5: To delete a contact: Type 'delete'\n")
-        print("6: To exit the program: Type 'exit\n")
+        print("4: To Update a contact: Type 'update'\n")
+        print("5: To Delete a contact: Type 'delete'\n")
+        print("6: To Exit the program: Type 'exit\n")
     intro()
-    menu = input("Type your choice: ")
+    menu = input("Type your choice: \n")
 # EXIT CHECK
 
     def checkExit():

@@ -1,11 +1,7 @@
 from peewee import *
 
-
-# class PostgresqlDatabase(db[, register_unicode=True[, encoding=None[, isolation_level=None]]]):
-
 db = PostgresqlDatabase('contacts', user='postgres', password='',
                         host='localhost', port=5432)
-
 db.connect()
 
 
@@ -20,3 +16,5 @@ class Contacts(BaseModel):
     number =  CharField()
     email = CharField()
     # on_list = BooleanField()
+    
+# class PostgresqlDatabase(db[, register_unicode=True[, encoding=None[, isolation_level=None]]]):
